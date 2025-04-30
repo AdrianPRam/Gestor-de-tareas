@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestió de Categories</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-theme">
+    <header class="header">
+        <h1 class="header-title">Gestió de Categories</h1>
+        <p class="header-subtitle">Administra les categories per a les teves tasques</p>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Inici</a>
+            <a href="crear-tasca.html" class="nav-link">Crear Tasca</a>
+            <a href="categories.html" class="nav-link active">Categories</a>
+        </nav>
+    </header>
+    <main class="main-container">
+        <section class="form-section">
+            <h2 class="section-title">Afegir Categoria</h2>
+            <form id="category-form">
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required>
+                
+                <label for="color">Color:</label>
+                <input type="color" id="color" name="color" required>
+                
+                <button type="submit">Afegir Categoria</button>
+            </form>
+        </section>
+        <section class="list-section">
+            <h2 class="section-title">Llista de Categories</h2>
+            <div id="category-list"></div>
+        </section>
+    </main>
+    <footer class="footer mar-top-fix270px">
+        <p>© 2025 Gestor de Tasques. Tots els drets reservats.</p>
+    </footer>
+    <script type="module" src="js/categories.js"></script>
+</body>
+</html>

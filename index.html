@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tasques - Inici</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dark-theme">
+    <header class="header">
+        <h1 class="header-title">Gestor de Tasques</h1>
+        <p class="header-subtitle">Organitza les teves activitats amb facilitat</p>
+        <nav class="nav">
+            <a href="index.html" class="nav-link active">Inici</a>
+            <a href="crear-tasca.html" class="nav-link">Crear Tasca</a>
+            <a href="categories.html" class="nav-link">Categories</a>
+        </nav>
+    </header>
+    <main class="main-container">
+        <section class="json-loader-section">
+            <h2 class="section-title">Cargar Tareas desde JSON</h2>
+            <form id="json-loader-form">
+                <label for="json-name">Nombre del archivo JSON (ej. activitats_001):</label>
+                <input type="text" id="json-name" name="json-name" placeholder="activitats_001">
+                <button type="submit">Cargar Tareas</button>
+            </form>
+        </section>
+        <section class="tasks-section">
+            <h2 class="section-title">Tasques Pendents</h2>
+            <div id="task-list" class="task-grid"></div>
+        </section>
+        <section class="tasks-section">
+            <h2 class="section-title">Tasques Realitzades</h2>
+            <div id="completed-tasks" class="task-grid"></div>
+        </section>
+        <section class="chart-section">
+            <h2 class="section-title">Estadístiques</h2>
+            <div class="chart-container">
+                <canvas id="tasksChart"></canvas>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>© 2025 Gestor de Tasques. Tots els drets reservats.</p>
+    </footer>
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>

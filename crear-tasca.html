@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Tasca</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body class="dark-theme">
+    <header class="header">
+        <h1 class="header-title">Crear Tasca</h1>
+        <p class="header-subtitle">Afegeix una nova activitat al teu gestor</p>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Inici</a>
+            <a href="crear-tasca.html" class="nav-link active">Crear Tasca</a>
+            <a href="categories.html" class="nav-link">Categories</a>
+        </nav>
+    </header>
+    <main class="main-container">
+        <section class="form-section">
+            <h2 class="section-title">Nova Tasca</h2>
+            <form id="task-form">
+                <label for="titol">Títol:</label>
+                <input type="text" id="titol" name="titol" required>
+                
+                <label for="descripcio">Descripció:</label>
+                <textarea id="descripcio" name="descripcio" required></textarea>
+                
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+                
+                <label for="categoria">Categoria:</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="">Selecciona una categoria</option>
+                </select>
+                
+                <label for="prioritat">Prioritat:</label>
+                <select id="prioritat" name="prioritat" required>
+                    <option value="Alta">Alta</option>
+                    <option value="Mitjana">Mitjana</option>
+                    <option value="Baixa">Baixa</option>
+                </select>
+                
+                <button type="submit">Afegir Tasca</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer mar-top-fix65px">
+        <p>© 2025 Gestor de Tasques. Tots els drets reservats.</p>
+    </footer>
+    <script type="module" src="js/form-tasca.js"></script>
+</body>
+</html>
