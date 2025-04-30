@@ -1,36 +1,33 @@
 import { Task } from './models.js';
 import { loadCategories, loadTasks, saveTasks, generateTaskId } from './storage.js';
-
+//esta funcion carga las categorias al menu de las tascas de creacion
 function populateCategories() {
-    try {
-        const categorySelect = document.getElementById('categoria');
-        if (!categorySelect) {
-            console.error('No se encontró el elemento #categoria en el DOM');
-            return;
-        }
-        categorySelect.innerHTML = '<option value="">Selecciona una categoria</option>';
-        const categories = loadCategories();
-        console.log('Categorías cargadas desde localStorage:', categories);
-        if (categories.length === 0) {
-            console.warn('No hay categorías disponibles en localStorage. Crea una categoría en categories.html');
-            categorySelect.innerHTML += '<option value="" disabled>No hi ha categories disponibles</option>';
-        }
-        categories.forEach(category => {
-            if (category.nom && category.color) {
-                const option = document.createElement('option');
-                option.value = JSON.stringify(category);
-                option.textContent = category.nom;
-                categorySelect.appendChild(option);
-            } else {
-                console.warn('Categoría inválida encontrada:', category);
-            }
-        });
-    } catch (error) {
-        console.error('Error al cargar categorías:', error);
-        alert('Error al cargar las categorías. Consulta la consola.');
+    
+    const categorySelect = document.getElementById('categoria');
+    if (!categorySelect) {
+        console.error('No se encontró el elemento #categoria en el DOM');
+        return;
     }
+    categorySelect.innerHTML = '<option value="">Selecciona una categoria</option>';
+    const categories = loadCategories();
+    console.log('Categorías cargadas desde localStorage:', categories);
+    if (categories.length === 0) {
+        console.warn('No hay categorías disponibles en localStorage. Crea una categoría en categories.html');
+        categorySelect.innerHTML += '<option value="" disabled>No hi ha categories disponibles</option>';
+    }
+    categories.forEach(category => {
+        if (category.nom && category.color) {
+            const option = document.createElement('option');
+            option.value = JSON.stringify(category);
+            option.textContent = category.nom;
+            categorySelect.appendChild(option);
+        } 
+    });
+    
+        
+    
 }
-
+// aqui he tenido ayuda un poco porque no me cargaba las tareas bien
 function handleSubmit(event) {
     event.preventDefault();
     

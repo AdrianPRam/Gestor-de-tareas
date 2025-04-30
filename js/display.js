@@ -5,10 +5,7 @@ function displayTasks(tasks) {
     try {
         const taskList = document.getElementById('task-list');
         const completedTaskList = document.getElementById('completed-tasks');
-        if (!taskList || !completedTaskList) {
-            console.error('No se encontraron los elementos #task-list o #completed-tasks en el DOM');
-            return;
-        }
+        
 
         const pendingTasks = tasks.filter(task => !task.realitzada);
         const completedTasks = tasks.filter(task => task.realitzada);

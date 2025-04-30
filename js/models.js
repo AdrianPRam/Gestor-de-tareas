@@ -16,3 +16,5 @@ export class Category {
         this.color = color;
     }
 }
+
+//solo es el modelo de las clases de tarea y categoria

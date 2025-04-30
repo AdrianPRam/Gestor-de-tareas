@@ -88,3 +88,6 @@ function initChart(tasks) {
 }
 
 export { initChart };
+
+// no voy a mentir aqui he tenido bastante ayuda no tenia ni idea de como va chart
+//la mitad es intentando añadir snippets de codigo de la pagina de charts y la otra es ayuda

@@ -17,9 +17,11 @@ export function loadCategories() {
 export function saveCategories(categories) {
     localStorage.setItem('categories', JSON.stringify(categories));
 }
-
+//vv he tenido un poco de ayuda con esto por el problema de la duplicacion vv
 export function generateTaskId() {
     const tasks = loadTasks();
     const lastId = tasks.length > 0 ? parseInt(tasks[tasks.length - 1].id.split('-')[1]) : 0;
     return `task-${String(lastId + 1).padStart(3, '0')}`;
 }
+
+//Estas funciones sirven para cargar y guardar categorias 
