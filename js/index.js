@@ -21,6 +21,7 @@ function isDuplicateTask(task1, task2) {
     );
 }
 //carga las tareas del JSON con un fetch y mira que no sobreescriba las tareas y que no esten repetidas
+//aqui he tenido ayuda por el mismo problema de duplicidad
 async function loadJsonTasks(jsonName) {
     try {
         // Asegurar que el nombre termine en .json
